@@ -21,7 +21,7 @@ post-rewrite
 TM
 `
 
-cd "./$(git rev-parse --show-cdup)"
+cd "./$(git rev-parse --show-toplevel)"
 
 if [ -z "$timings" ]; then
   timings="$ALLOWED_TIMING"

@@ -55,7 +55,7 @@ if [ -f "$hook" ]; then
   hook="$(cd $(dirname "$hook") && pwd)/$(basename $hook)"
 fi
 
-cd "./$(git rev-parse --show-cdup)"
+cd "./$(git rev-parse --show-toplevel)"
 cd "$(git rev-parse --git-dir)/hooks"
 
 hookdiff="$(diff "$template" "$timing" 2>&1)"
